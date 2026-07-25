@@ -1,6 +1,6 @@
 # Coriolis — karta Algol do Roll20
 
-Nieoficjalna, samodzielna karta bohatera i BN-a do **Coriolis: Trzeci Horyzont**. Została napisana pod ograniczenia klasycznych kart Roll20 i wizualnie nawiązuje do czarno-złotego, szklanego motywu Algol znanego z Foundry VTT. Nie korzysta z zewnętrznych fontów, obrazów ani skryptów.
+Nieoficjalna, samodzielna karta bohatera i BN-a do **Coriolis: Trzeci Horyzont**. Została napisana pod ograniczenia klasycznych kart Roll20 i wizualnie nawiązuje do czarno-złotego, szklanego motywu Algol znanego z Foundry VTT. Nie korzysta z zewnętrznych fontów ani skryptów; cztery ikony atrybutów są pobierane jako publiczne pliki PNG z tego repozytorium.
 
 ## Instalacja w kampanii Roll20
 
