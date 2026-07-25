@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coriolis Algol — podgląd</title>
+  <style>
+    html { background: #202625; }
+    body { margin: 0; padding: 24px; }
+    .preview-shell { margin: 0 auto; max-width: 900px; }
+    .preview-note {
+      color: #c6b9aa;
+      font: 12px/1.4 "Segoe UI", sans-serif;
+      margin: 0 auto 12px;
+      max-width: 900px;
+    }
+  </style>
+</head>
+<body>
+  <p class="preview-note">Lokalny podgląd układu. Sheet Workery i automatyczne kontrolki sekcji powtarzalnych działają wyłącznie w Roll20.</p>
+  <div class="preview-shell" id="preview-root"></div>
+  <script>
+    Promise.all([
+      fetch("../coriolis-algol.html").then((response) => response.text()),
+      fetch("../coriolis-algol.css").then((response) => response.text()),
+      fetch("../translations/pl.json").then((response) => response.json())
+    ]).then(([html, css, translations]) => {
+      const style = document.createElement("style");
+      style.textContent = css;
+      document.head.appendChild(style);
+      const previewMarkup = html
+        .replace(/<script type="text\/worker">[\s\S]*?<\/script>/, "")
+        .replace(/<rolltemplate[\s\S]*?<\/rolltemplate>/, "");
+      const root = document.getElementById("preview-root");
+      root.innerHTML = previewMarkup;
+
+      root.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[key]) element.textContent = translations[key];
+      });
+      root.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-placeholder");
+        if (translations[key]) element.setAttribute("placeholder", translations[key]);
+      });
+      root.querySelectorAll("[data-i18n-title]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-title");
+        if (translations[key]) element.setAttribute("title", translations[key]);
+      });
+
+      const tab = new URLSearchParams(window.location.search).get("tab") || "stats";
+      const tabControl = root.querySelector(`input[name="attr_tab"][value="${tab}"]`);
+      if (tabControl) tabControl.checked = true;
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+</html>

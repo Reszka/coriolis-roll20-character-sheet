@@ -1,0 +1,1362 @@
+<div class="sheet-coriolis">
+  <input type="hidden" name="attr_sheet_version" value="">
+  <input type="hidden" name="attr_last_can_push" value="0">
+  <input type="hidden" name="attr_last_remaining" value="0">
+  <input type="hidden" name="attr_last_successes" value="0">
+  <input type="hidden" name="attr_last_title" value="">
+  <input type="hidden" name="attr_last_details" value="">
+  <input type="hidden" name="attr_last_automatic" value="0">
+  <input type="hidden" name="attr_last_desperation" value="0">
+  <input type="hidden" name="attr_last_damage" value="">
+  <input type="hidden" name="attr_last_crit" value="">
+  <input type="hidden" name="attr_last_range" value="">
+  <input type="hidden" name="attr_last_weapon_roll" value="0">
+  <input type="hidden" name="attr_last_component1" value="">
+  <input type="hidden" name="attr_last_component1_value" value="">
+  <input type="hidden" name="attr_last_component2" value="">
+  <input type="hidden" name="attr_last_component2_value" value="">
+  <input type="hidden" name="attr_last_component3" value="">
+  <input type="hidden" name="attr_last_component3_value" value="">
+  <input type="hidden" name="attr_last_component4" value="">
+  <input type="hidden" name="attr_last_component4_value" value="">
+  <input type="hidden" name="attr_armor_rating_total" value="0">
+  <button class="sheet-chat-action" type="action" name="act_push" tabindex="-1" aria-hidden="true"></button>
+  <input type="hidden" name="attr_mod_strength" value="0">
+  <input type="hidden" name="attr_mod_agility" value="0">
+  <input type="hidden" name="attr_mod_wits" value="0">
+  <input type="hidden" name="attr_mod_empathy" value="0">
+  <input type="hidden" name="attr_mod_dexterity" value="0">
+  <input type="hidden" name="attr_mod_force" value="0">
+  <input type="hidden" name="attr_mod_infiltration" value="0">
+  <input type="hidden" name="attr_mod_manipulation" value="0">
+  <input type="hidden" name="attr_mod_meleecombat" value="0">
+  <input type="hidden" name="attr_mod_observation" value="0">
+  <input type="hidden" name="attr_mod_rangedcombat" value="0">
+  <input type="hidden" name="attr_mod_survival" value="0">
+  <input type="hidden" name="attr_mod_command" value="0">
+  <input type="hidden" name="attr_mod_culture" value="0">
+  <input type="hidden" name="attr_mod_datadjinn" value="0">
+  <input type="hidden" name="attr_mod_medicurgy" value="0">
+  <input type="hidden" name="attr_mod_mysticpowers" value="0">
+  <input type="hidden" name="attr_mod_pilot" value="0">
+  <input type="hidden" name="attr_mod_science" value="0">
+  <input type="hidden" name="attr_mod_technology" value="0">
+  <input type="hidden" name="attr_gear_mod_encumbrance" value="0">
+  <input type="hidden" name="attr_gear_mod_movement" value="0">
+
+  <div class="sheet-orbit sheet-orbit-one"></div>
+  <div class="sheet-orbit sheet-orbit-two"></div>
+
+  <div class="sheet-topline">
+    <span data-i18n="third-horizon">Coriolis: The Third Horizon</span>
+    <span class="sheet-topline-mark">✦</span>
+    <span data-i18n="character-record">Character Record</span>
+  </div>
+
+  <div class="sheet-header-grid">
+    <div class="sheet-identity">
+      <label class="sheet-eyebrow" data-i18n="name">Name</label>
+      <input class="sheet-character-name" type="text" name="attr_character_name" data-i18n-placeholder="name">
+      <div class="sheet-identity-line">
+        <label>
+          <span data-i18n="concept">Concept</span>
+          <input type="text" name="attr_concept" data-i18n-placeholder="concept">
+        </label>
+        <label>
+          <span data-i18n="icon">Icon</span>
+          <input type="text" name="attr_icon" data-i18n-placeholder="icon">
+        </label>
+        <label>
+          <span data-i18n="origin">Origin</span>
+          <input type="text" name="attr_origin" data-i18n-placeholder="origin">
+        </label>
+      </div>
+      <label class="sheet-personal-problem">
+        <span data-i18n="personal-problem">Personal problem</span>
+        <textarea name="attr_personal_problem" data-i18n-placeholder="personal-problem"></textarea>
+      </label>
+    </div>
+    <div class="sheet-portrait sheet-header-portrait">
+      <div class="sheet-portrait-placeholder" aria-hidden="true">
+        <span>☼</span>
+        <small data-i18n="portrait">Portrait</small>
+      </div>
+      <img class="sheet-character-avatar" name="attr_character_avatar" alt="Character portrait">
+    </div>
+  </div>
+
+  <div class="sheet-resource-strip">
+    <label class="sheet-resource sheet-resource-hp">
+      <span data-i18n="hit-points">Hit Points</span>
+      <span class="sheet-resource-values">
+        <input class="sheet-resource-current" type="number" name="attr_hp" value="0" min="0">
+        <b>/</b>
+        <input class="sheet-resource-maximum" type="number" name="attr_hp_formula" value="@{strength}+@{agility}+@{hp_bonus}" disabled="true" tabindex="-1">
+      </span>
+    </label>
+    <label class="sheet-resource sheet-resource-mp">
+      <span data-i18n="mind-points">Mind Points</span>
+      <span class="sheet-resource-values">
+        <input class="sheet-resource-current" type="number" name="attr_mp" value="0" min="0">
+        <b>/</b>
+        <input class="sheet-resource-maximum" type="number" name="attr_mp_formula" value="@{wits}+@{empathy}+@{mp_bonus}" disabled="true" tabindex="-1">
+      </span>
+    </label>
+    <label class="sheet-resource sheet-resource-rad">
+      <span data-i18n="radiation">Radiation</span>
+      <span class="sheet-resource-values">
+        <input type="number" name="attr_radiation" value="0" min="0">
+      </span>
+    </label>
+    <label class="sheet-resource sheet-resource-xp">
+      <span data-i18n="experience">Experience</span>
+      <span class="sheet-resource-values">
+        <input type="number" name="attr_experience" value="0" min="0">
+      </span>
+    </label>
+    <label class="sheet-resource sheet-resource-rep">
+      <span data-i18n="reputation">Reputation</span>
+      <span class="sheet-resource-values">
+        <input type="number" name="attr_reputation" value="0">
+      </span>
+    </label>
+  </div>
+
+  <div class="sheet-tabs">
+    <input class="sheet-tab-control sheet-tab-stats-control" type="radio" name="attr_tab" value="stats" checked>
+    <span class="sheet-tab-label" data-i18n="stats">Stats</span>
+    <input class="sheet-tab-control sheet-tab-items-control" type="radio" name="attr_tab" value="items">
+    <span class="sheet-tab-label" data-i18n="items">Items</span>
+    <input class="sheet-tab-control sheet-tab-talents-control" type="radio" name="attr_tab" value="talents">
+    <span class="sheet-tab-label" data-i18n="talents">Talents</span>
+    <input class="sheet-tab-control sheet-tab-bio-control" type="radio" name="attr_tab" value="bio">
+    <span class="sheet-tab-label" data-i18n="biography">Biography</span>
+    <input class="sheet-tab-control sheet-tab-notes-control" type="radio" name="attr_tab" value="notes">
+    <span class="sheet-tab-label" data-i18n="notes">Notes</span>
+
+    <div class="sheet-tab-panel sheet-tab-stats">
+      <div class="sheet-stats-layout">
+        <div class="sheet-main-column">
+          <div class="sheet-attributes">
+            <div class="sheet-attribute sheet-attribute-strength">
+              <button type="action" name="act_roll_strength" data-i18n-title="roll-strength">
+                <img class="sheet-attribute-glyph sheet-icon-strength" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sila.png" alt="" aria-hidden="true">
+                <strong data-i18n="strength">Strength</strong>
+              </button>
+              <input type="number" name="attr_strength" value="0" min="0" max="5">
+            </div>
+            <div class="sheet-attribute sheet-attribute-agility">
+              <button type="action" name="act_roll_agility" data-i18n-title="roll-agility">
+                <img class="sheet-attribute-glyph sheet-icon-agility" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sprawnosc.png" alt="" aria-hidden="true">
+                <strong data-i18n="agility">Agility</strong>
+              </button>
+              <input type="number" name="attr_agility" value="0" min="0" max="5">
+            </div>
+            <div class="sheet-attribute sheet-attribute-wits">
+              <button type="action" name="act_roll_wits" data-i18n-title="roll-wits">
+                <img class="sheet-attribute-glyph sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true">
+                <strong data-i18n="wits">Wits</strong>
+              </button>
+              <input type="number" name="attr_wits" value="0" min="0" max="5">
+            </div>
+            <div class="sheet-attribute sheet-attribute-empathy">
+              <button type="action" name="act_roll_empathy" data-i18n-title="roll-empathy">
+                <img class="sheet-attribute-glyph sheet-icon-empathy" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/osobowosc.png" alt="" aria-hidden="true">
+                <strong data-i18n="empathy">Empathy</strong>
+              </button>
+              <input type="number" name="attr_empathy" value="0" min="0" max="5">
+            </div>
+          </div>
+
+          <div class="sheet-section-title">
+            <span data-i18n="skills">Skills</span>
+            <small data-i18n="click-to-roll">Click a skill name to roll</small>
+          </div>
+          <div class="sheet-skills-grid">
+            <div class="sheet-skill-panel">
+              <h3 data-i18n="general-skills">General Skills</h3>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_force"><span data-i18n="force">Force</span><img class="sheet-skill-attribute-icon sheet-icon-strength" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sila.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_force" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_manipulation"><span data-i18n="manipulation">Manipulation</span><img class="sheet-skill-attribute-icon sheet-icon-empathy" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/osobowosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_manipulation" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_observation"><span data-i18n="observation">Observation</span><img class="sheet-skill-attribute-icon sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_observation" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_survival"><span data-i18n="survival">Survival</span><img class="sheet-skill-attribute-icon sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_survival" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_infiltration"><span data-i18n="infiltration">Infiltration</span><img class="sheet-skill-attribute-icon sheet-icon-agility" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sprawnosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_infiltration" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_rangedcombat"><span data-i18n="ranged-combat">Ranged Combat</span><img class="sheet-skill-attribute-icon sheet-icon-agility" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sprawnosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_rangedcombat" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_meleecombat"><span data-i18n="melee-combat">Melee Combat</span><img class="sheet-skill-attribute-icon sheet-icon-strength" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sila.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_meleecombat" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <button type="action" name="act_roll_dexterity"><span data-i18n="dexterity">Dexterity</span><img class="sheet-skill-attribute-icon sheet-icon-agility" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sprawnosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_dexterity" value="0" min="0" max="5">
+              </div>
+            </div>
+
+            <div class="sheet-skill-panel">
+              <h3 data-i18n="advanced-skills">Advanced Skills</h3>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_command_trained" value="0">
+                <button type="action" name="act_roll_command"><span data-i18n="command">Command</span><img class="sheet-skill-attribute-icon sheet-icon-empathy" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/osobowosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_command" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_datadjinn_trained" value="0">
+                <button type="action" name="act_roll_datadjinn"><span data-i18n="data-djinn">Data Djinn</span><img class="sheet-skill-attribute-icon sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_datadjinn" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_medicurgy_trained" value="0">
+                <button type="action" name="act_roll_medicurgy"><span data-i18n="medicurgy">Medicurgy</span><img class="sheet-skill-attribute-icon sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_medicurgy" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_mysticpowers_trained" value="0">
+                <button type="action" name="act_roll_mysticpowers"><span data-i18n="mystic-powers">Mystic Powers</span><img class="sheet-skill-attribute-icon sheet-icon-empathy" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/osobowosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_mysticpowers" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_science_trained" value="0">
+                <button type="action" name="act_roll_science"><span data-i18n="science">Science</span><img class="sheet-skill-attribute-icon sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_science" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_pilot_trained" value="0">
+                <button type="action" name="act_roll_pilot"><span data-i18n="pilot">Pilot</span><img class="sheet-skill-attribute-icon sheet-icon-agility" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/sprawnosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_pilot" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_technology_trained" value="0">
+                <button type="action" name="act_roll_technology"><span data-i18n="technology">Technology</span><img class="sheet-skill-attribute-icon sheet-icon-wits" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/bystrosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_technology" value="0" min="0" max="5">
+              </div>
+              <div class="sheet-skill-row">
+                <input class="sheet-skill-trained-flag" type="hidden" name="attr_culture_trained" value="0">
+                <button type="action" name="act_roll_culture"><span data-i18n="culture">Culture</span><img class="sheet-skill-attribute-icon sheet-icon-empathy" src="https://raw.githubusercontent.com/Reszka/coriolis-roll20-character-sheet/main/media/osobowosc.png" alt="" aria-hidden="true"></button>
+                <input type="number" name="attr_culture" value="0" min="0" max="5">
+              </div>
+            </div>
+          </div>
+
+          <div class="sheet-section-title"><span data-i18n="critical-injuries">Critical Injuries</span></div>
+          <fieldset class="repeating_injuries">
+            <div class="sheet-repeating-card sheet-injury-card">
+              <input class="sheet-grow" type="text" name="attr_injury_name" data-i18n-placeholder="injury-name">
+              <label><span data-i18n="fatal">Fatal</span><input type="checkbox" name="attr_injury_fatal" value="1"></label>
+              <label><span data-i18n="time-limit">Time limit</span><input type="text" name="attr_injury_timelimit"></label>
+              <label><span data-i18n="heal-time">Heal time</span><input type="text" name="attr_injury_healtime"></label>
+              <label><span data-i18n="bonus">Bonus</span><input type="number" name="attr_injury_bonus" value="0"></label>
+              <textarea name="attr_injury_description" data-i18n-placeholder="description"></textarea>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="sheet-roll-console">
+          <h2><span class="sheet-console-light"></span><span data-i18n="roll-console">Roll Console</span></h2>
+          <label>
+            <span data-i18n="roll-visibility">Rolls</span>
+            <select name="attr_roll_visibility">
+              <option value="public" data-i18n="public">Public</option>
+              <option value="gm" data-i18n="gm-only">GM only</option>
+            </select>
+          </label>
+          <div class="sheet-console-actions">
+            <button class="sheet-secondary-button" type="action" name="act_roll_initiative" data-i18n="initiative">Initiative</button>
+            <button class="sheet-secondary-button" type="action" name="act_roll_armor" data-i18n="armor">Armor</button>
+            <button class="sheet-secondary-button" type="action" name="act_roll_radiation" data-i18n="radiation">Radiation</button>
+          </div>
+          <label>
+            <span data-i18n="custom-roll-name">Custom roll name</span>
+            <input type="text" name="attr_custom_roll_name" data-i18n-placeholder="custom-roll">
+          </label>
+          <label>
+            <span data-i18n="custom-dice-pool">Custom dice pool</span>
+            <input type="number" name="attr_custom_roll_pool" value="1">
+          </label>
+          <button class="sheet-secondary-button" type="action" name="act_roll_custom" data-i18n="roll-custom">Roll custom pool</button>
+          <div class="sheet-derived">
+            <h3 data-i18n="derived-values">Derived values</h3>
+            <div>
+              <label><span data-i18n="hp-bonus">HP bonus</span><input type="number" name="attr_hp_bonus" value="0"></label>
+              <label><span data-i18n="mp-bonus">MP bonus</span><input type="number" name="attr_mp_bonus" value="0"></label>
+              <label><span data-i18n="encumbrance-bonus">Encumbrance bonus</span><input type="number" name="attr_encumbrance_bonus" value="0"></label>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="sheet-tab-panel sheet-tab-items">
+      <div class="sheet-item-summary">
+        <div>
+          <span data-i18n="encumbrance">Encumbrance</span>
+          <strong><span name="attr_encumbrance_value">0</span> / <span name="attr_encumbrance_max">0</span></strong>
+        </div>
+        <p data-i18n="encumbrance-help">Equipped light items count as 0.5, normal as 1, and heavy as 2.</p>
+      </div>
+
+      <div class="sheet-section-title"><span data-i18n="weapons">Weapons & Explosives</span></div>
+      <fieldset class="repeating_weapons">
+        <div class="sheet-repeating-card sheet-weapon-card">
+          <div class="sheet-item-row sheet-item-row-primary">
+            <button type="action" name="act_weaponroll" class="sheet-item-roll">◆ <span data-i18n="roll">Roll</span></button>
+            <input class="sheet-grow" type="text" name="attr_weapon_name" data-i18n-placeholder="weapon-name">
+            <label><span data-i18n="equipped">Equipped</span><input type="checkbox" name="attr_weapon_equipped" value="1"></label>
+            <label><span data-i18n="quantity">Qty</span><input type="number" name="attr_weapon_quantity" value="1" min="0"></label>
+            <select name="attr_weapon_weight">
+              <option value="0" data-i18n="weight-zero">Zero</option>
+              <option value="0" data-i18n="weight-tiny">Tiny</option>
+              <option value="0.5" data-i18n="weight-light" selected>Light</option>
+              <option value="1" data-i18n="weight-normal">Normal</option>
+              <option value="2" data-i18n="weight-heavy">Heavy</option>
+            </select>
+          </div>
+          <div class="sheet-item-row sheet-weapon-stats">
+            <label><span data-i18n="weapon-type">Type</span>
+              <select name="attr_weapon_type">
+                <option value="ranged" data-i18n="ranged">Ranged</option>
+                <option value="melee" data-i18n="melee">Melee</option>
+              </select>
+            </label>
+            <label><span data-i18n="bonus">Bonus</span><input type="number" name="attr_weapon_bonus" value="0"></label>
+            <label><span data-i18n="initiative">Init.</span><input type="number" name="attr_weapon_initiative" value="0"></label>
+            <label><span data-i18n="damage">Damage</span><input type="text" name="attr_weapon_damage" value="0"></label>
+            <label><span data-i18n="crit">Crit.</span><input type="text" name="attr_weapon_crit" value="0"></label>
+            <label><span data-i18n="range">Range</span>
+              <select name="attr_weapon_range">
+                <option value="contact" data-i18n="range-contact">Contact</option>
+                <option value="short" data-i18n="range-short">Short</option>
+                <option value="close" data-i18n="range-close">Close</option>
+                <option value="medium" data-i18n="range-medium">Medium</option>
+                <option value="long" data-i18n="range-long">Long</option>
+                <option value="extreme" data-i18n="range-extreme">Extreme</option>
+              </select>
+            </label>
+            <label><span data-i18n="reloads">Reloads</span><input type="number" name="attr_weapon_reloads" value="0" min="0" max="6"></label>
+            <label><span data-i18n="fire-mode">Mode</span>
+              <select name="attr_weapon_mode">
+                <option value="normal" data-i18n="normal-fire">Normal</option>
+                <option value="automatic" data-i18n="automatic-fire">Automatic</option>
+              </select>
+            </label>
+          </div>
+          <div class="sheet-item-row sheet-item-row-secondary">
+            <label><span data-i18n="ignored-ones">Ignored 1s</span><input type="number" name="attr_weapon_ignoredones" value="0" min="0"></label>
+            <label><span data-i18n="explosive">Explosive</span><input type="checkbox" name="attr_weapon_explosive" value="1"></label>
+            <label><span data-i18n="blast-power">Blast power</span><input type="number" name="attr_weapon_blastpower" value="0" min="0"></label>
+            <label><span data-i18n="blast-radius">Blast radius</span><input type="text" name="attr_weapon_blastradius"></label>
+            <input class="sheet-grow" type="text" name="attr_weapon_features" data-i18n-placeholder="features">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="sheet-section-title"><span data-i18n="armor">Armor</span></div>
+      <fieldset class="repeating_armor">
+        <div class="sheet-repeating-card sheet-armor-card">
+          <div class="sheet-item-row">
+            <button type="action" name="act_armorroll" class="sheet-item-roll">◇ <span data-i18n="roll">Roll</span></button>
+            <input class="sheet-grow" type="text" name="attr_armor_name" data-i18n-placeholder="armor-name">
+            <label><span data-i18n="rating">Rating</span><input type="number" name="attr_armor_rating" value="0" min="0"></label>
+            <label><span data-i18n="extra-features">Extra features</span><input type="number" name="attr_armor_extrafeatures" value="0" min="0"></label>
+            <label><span data-i18n="equipped">Equipped</span><input type="checkbox" name="attr_armor_equipped" value="1"></label>
+            <select name="attr_armor_weight">
+              <option value="0" data-i18n="weight-zero">Zero</option>
+              <option value="0" data-i18n="weight-tiny">Tiny</option>
+              <option value="0.5" data-i18n="weight-light" selected>Light</option>
+              <option value="1" data-i18n="weight-normal">Normal</option>
+              <option value="2" data-i18n="weight-heavy">Heavy</option>
+            </select>
+          </div>
+          <textarea name="attr_armor_features" data-i18n-placeholder="features-and-description"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="sheet-section-title"><span data-i18n="gear">Gear</span></div>
+      <fieldset class="repeating_gear">
+        <div class="sheet-repeating-card sheet-gear-card">
+          <div class="sheet-item-row">
+            <input class="sheet-grow" type="text" name="attr_gear_name" data-i18n-placeholder="gear-name">
+            <label><span data-i18n="quantity">Qty</span><input type="number" name="attr_gear_quantity" value="1" min="0"></label>
+            <label><span data-i18n="equipped">Equipped</span><input type="checkbox" name="attr_gear_equipped" value="1"></label>
+            <select name="attr_gear_weight">
+              <option value="0" data-i18n="weight-zero">Zero</option>
+              <option value="0" data-i18n="weight-tiny">Tiny</option>
+              <option value="0.5" data-i18n="weight-light" selected>Light</option>
+              <option value="1" data-i18n="weight-normal">Normal</option>
+              <option value="2" data-i18n="weight-heavy">Heavy</option>
+            </select>
+            <label><span data-i18n="tech-tier">Tech tier</span><input type="text" name="attr_gear_techtier"></label>
+            <label><span data-i18n="cost">Cost</span><input type="number" name="attr_gear_cost" value="0"></label>
+            <label><span data-i18n="restricted">Restricted</span><input type="checkbox" name="attr_gear_restricted" value="1"></label>
+          </div>
+          <div class="sheet-item-row sheet-item-row-secondary">
+            <label><span data-i18n="modifier-target">Modifier target</span>
+              <select name="attr_gear_target">
+                <option value="" data-i18n="none">None</option>
+                <optgroup label="Attributes">
+                  <option value="strength" data-i18n="strength">Strength</option>
+                  <option value="agility" data-i18n="agility">Agility</option>
+                  <option value="wits" data-i18n="wits">Wits</option>
+                  <option value="empathy" data-i18n="empathy">Empathy</option>
+                </optgroup>
+                <optgroup label="General skills">
+                  <option value="dexterity" data-i18n="dexterity">Dexterity</option>
+                  <option value="force" data-i18n="force">Force</option>
+                  <option value="infiltration" data-i18n="infiltration">Infiltration</option>
+                  <option value="manipulation" data-i18n="manipulation">Manipulation</option>
+                  <option value="meleecombat" data-i18n="melee-combat">Melee Combat</option>
+                  <option value="observation" data-i18n="observation">Observation</option>
+                  <option value="rangedcombat" data-i18n="ranged-combat">Ranged Combat</option>
+                  <option value="survival" data-i18n="survival">Survival</option>
+                </optgroup>
+                <optgroup label="Advanced skills">
+                  <option value="command" data-i18n="command">Command</option>
+                  <option value="culture" data-i18n="culture">Culture</option>
+                  <option value="datadjinn" data-i18n="data-djinn">Data Djinn</option>
+                  <option value="medicurgy" data-i18n="medicurgy">Medicurgy</option>
+                  <option value="mysticpowers" data-i18n="mystic-powers">Mystic Powers</option>
+                  <option value="pilot" data-i18n="pilot">Pilot</option>
+                  <option value="science" data-i18n="science">Science</option>
+                  <option value="technology" data-i18n="technology">Technology</option>
+                </optgroup>
+                <optgroup label="Derived">
+                  <option value="encumbrance" data-i18n="encumbrance">Encumbrance</option>
+                </optgroup>
+              </select>
+            </label>
+            <label><span data-i18n="modifier">Modifier</span><input type="number" name="attr_gear_bonus" value="0"></label>
+            <input class="sheet-grow" type="text" name="attr_gear_description" data-i18n-placeholder="description">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="sheet-section-title"><span data-i18n="additional-modifiers">Additional Item Modifiers</span></div>
+      <p class="sheet-panel-intro" data-i18n="additional-modifiers-help">Use extra rows when one item modifies more than one value.</p>
+      <fieldset class="repeating_modifiers">
+        <div class="sheet-repeating-card sheet-modifier-card">
+          <input class="sheet-grow" type="text" name="attr_modifier_name" data-i18n-placeholder="modifier-name">
+          <label><span data-i18n="active">Active</span><input type="checkbox" name="attr_modifier_enabled" value="1"></label>
+          <label><span data-i18n="modifier-target">Modifier target</span>
+            <select name="attr_modifier_target">
+              <option value="" data-i18n="none">None</option>
+              <optgroup label="Attributes">
+                <option value="strength" data-i18n="strength">Strength</option>
+                <option value="agility" data-i18n="agility">Agility</option>
+                <option value="wits" data-i18n="wits">Wits</option>
+                <option value="empathy" data-i18n="empathy">Empathy</option>
+              </optgroup>
+              <optgroup label="General skills">
+                <option value="dexterity" data-i18n="dexterity">Dexterity</option>
+                <option value="force" data-i18n="force">Force</option>
+                <option value="infiltration" data-i18n="infiltration">Infiltration</option>
+                <option value="manipulation" data-i18n="manipulation">Manipulation</option>
+                <option value="meleecombat" data-i18n="melee-combat">Melee Combat</option>
+                <option value="observation" data-i18n="observation">Observation</option>
+                <option value="rangedcombat" data-i18n="ranged-combat">Ranged Combat</option>
+                <option value="survival" data-i18n="survival">Survival</option>
+              </optgroup>
+              <optgroup label="Advanced skills">
+                <option value="command" data-i18n="command">Command</option>
+                <option value="culture" data-i18n="culture">Culture</option>
+                <option value="datadjinn" data-i18n="data-djinn">Data Djinn</option>
+                <option value="medicurgy" data-i18n="medicurgy">Medicurgy</option>
+                <option value="mysticpowers" data-i18n="mystic-powers">Mystic Powers</option>
+                <option value="pilot" data-i18n="pilot">Pilot</option>
+                <option value="science" data-i18n="science">Science</option>
+                <option value="technology" data-i18n="technology">Technology</option>
+              </optgroup>
+              <optgroup label="Derived">
+                <option value="encumbrance" data-i18n="encumbrance">Encumbrance</option>
+              </optgroup>
+            </select>
+          </label>
+          <label><span data-i18n="modifier">Modifier</span><input type="number" name="attr_modifier_value" value="0"></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="sheet-tab-panel sheet-tab-talents">
+      <div class="sheet-section-title"><span data-i18n="talents">Talents</span></div>
+      <p class="sheet-panel-intro" data-i18n="talents-help">Record group, Icon, general, Humanite, cybernetic, bionic and mystical talents here.</p>
+      <fieldset class="repeating_talents">
+        <div class="sheet-repeating-card sheet-talent-card">
+          <div class="sheet-item-row">
+            <span class="sheet-item-emblem">✦</span>
+            <input class="sheet-grow" type="text" name="attr_talent_name" data-i18n-placeholder="talent-name">
+            <label><span data-i18n="category">Category</span>
+              <select name="attr_talent_category">
+                <option value="group" data-i18n="talent-group">Group</option>
+                <option value="icon" data-i18n="talent-icon">Icon</option>
+                <option value="general" data-i18n="talent-general">General</option>
+                <option value="humanite" data-i18n="talent-humanite">Humanite</option>
+                <option value="cybernetic" data-i18n="talent-cybernetic">Cybernetic</option>
+                <option value="bionicsculpt" data-i18n="talent-bionic">Bionic sculpt</option>
+                <option value="mysticalpowers" data-i18n="talent-mystical">Mystical power</option>
+              </select>
+            </label>
+            <label><span data-i18n="cost">Cost</span><input type="number" name="attr_talent_cost" value="0"></label>
+            <label><span data-i18n="group-concept">Group concept</span><input type="text" name="attr_talent_groupconcept"></label>
+          </div>
+          <textarea name="attr_talent_description" data-i18n-placeholder="description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="sheet-tab-panel sheet-tab-bio">
+      <div class="sheet-bio-grid">
+        <div class="sheet-bio-card">
+          <h3 data-i18n="background">Background</h3>
+          <label><span data-i18n="upbringing">Upbringing</span><input type="text" name="attr_upbringing"></label>
+          <label><span data-i18n="group-concept">Group concept</span><input type="text" name="attr_group_concept"></label>
+          <label class="sheet-inline-check"><span data-i18n="humanite">Humanite</span><input type="checkbox" name="attr_humanite" value="1"></label>
+        </div>
+        <div class="sheet-bio-card">
+          <h3 data-i18n="appearance">Appearance</h3>
+          <label><span data-i18n="face">Face</span><textarea name="attr_appearance_face"></textarea></label>
+          <label><span data-i18n="clothing">Clothing</span><textarea name="attr_appearance_clothing"></textarea></label>
+          <label><span data-i18n="crew-position">Crew position</span>
+            <select name="attr_crew_position">
+              <option value="" data-i18n="none">None</option>
+              <option value="captain" data-i18n="captain">Captain</option>
+              <option value="engineer" data-i18n="engineer">Engineer</option>
+              <option value="pilot" data-i18n="pilot">Pilot</option>
+              <option value="sensoroperator" data-i18n="sensor-operator">Sensor operator</option>
+              <option value="gunner" data-i18n="gunner">Gunner</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="sheet-section-title"><span data-i18n="relationships">Relationships</span></div>
+      <fieldset class="repeating_relationships">
+        <div class="sheet-repeating-card sheet-relationship-card">
+          <input class="sheet-grow" type="text" name="attr_relationship_name" data-i18n-placeholder="name">
+          <label><span data-i18n="buddy">Buddy</span><input type="checkbox" name="attr_relationship_buddy" value="1"></label>
+          <textarea name="attr_relationship_notes" data-i18n-placeholder="relationship-notes"></textarea>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="sheet-tab-panel sheet-tab-notes">
+      <div class="sheet-notes-grid">
+        <label>
+          <span data-i18n="character-notes">Character notes</span>
+          <textarea name="attr_character_notes"></textarea>
+        </label>
+        <label>
+          <span data-i18n="cabin">Cabin</span>
+          <textarea name="attr_cabin_description"></textarea>
+        </label>
+        <label>
+          <span data-i18n="meetings-and-contacts">Meetings & contacts</span>
+          <textarea name="attr_meetings"></textarea>
+        </label>
+      </div>
+      <label class="sheet-notes-birr">
+        <span data-i18n="birr">Birr</span>
+        <input type="text" name="attr_birr" value="0" inputmode="numeric" maxlength="6" pattern="[0-9]*">
+      </label>
+    </div>
+  </div>
+
+  <div class="sheet-footer">
+    <span data-i18n="footer-text">Algol-inspired Roll20 character sheet</span>
+    <span>v1.6.5</span>
+  </div>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-coriolis">
+  <div class="sheet-template-frame">
+    <div class="sheet-template-header">
+      <div class="sheet-template-kicker">{{character}}</div>
+      <div class="sheet-template-title">{{title}}</div>
+    </div>
+    {{#invalid}}
+      <div class="sheet-template-invalid">{{invalid}}</div>
+    {{/invalid}}
+    {{^invalid}}
+      {{#initiative}}
+        <div class="sheet-template-body">
+          <div class="sheet-template-pool">
+            <span data-i18n="initiative">Initiative</span>
+            <strong>1K10</strong>
+          </div>
+          <div class="sheet-template-components">
+            <div><span data-i18n="modifier">Modifier</span> <b>({{modifier}})</b></div>
+          </div>
+          <div class="sheet-template-outcome sheet-outcome-initiative">
+            <span class="sheet-template-success-label" data-i18n="initiative-result">Initiative result</span>
+            <span class="sheet-template-successes">{{initiative_roll}}</span>
+          </div>
+          <div class="sheet-template-details" data-i18n="initiative-highest">The character with the highest result starts.</div>
+        </div>
+      {{/initiative}}
+      {{^initiative}}
+      <div class="sheet-template-body">
+        <div class="sheet-template-pool">
+          <span>{{#prayed}}<span data-i18n="push">Push</span>{{/prayed}}{{^prayed}}<span data-i18n="pool">Pool</span>{{/prayed}}</span>
+          <strong>{{pool}}K6</strong>
+        </div>
+        <div class="sheet-template-components">
+          {{#component1}}<div><span>{{component1}}</span> <b>({{component1value}})</b></div>{{/component1}}
+          {{#component2}}<div><span>{{component2}}</span> <b>({{component2value}})</b></div>{{/component2}}
+          {{#component3}}<div><span>{{component3}}</span> <b>({{component3value}})</b></div>{{/component3}}
+          {{#component4}}<div><span>{{component4}}</span> <b>({{component4value}})</b></div>{{/component4}}
+        </div>
+        {{#utility}}
+          <div class="sheet-template-outcome sheet-outcome-utility">
+            <span class="sheet-template-success-label">{{resultlabel}}</span>
+            <span class="sheet-template-successes">{{computed::dice}}</span>
+            <b class="sheet-template-verdict">{{resultnote}}</b>
+          </div>
+        {{/utility}}
+        {{^utility}}
+          {{#rollTotal() computed::outcome 0}}
+            <div class="sheet-template-outcome sheet-outcome-failure">
+              <span class="sheet-template-success-label" data-i18n="success-count">Success count</span>
+              <span class="sheet-template-successes">{{computed::dice}}</span>
+              <b class="sheet-template-verdict" data-i18n="failure">Failure</b>
+            </div>
+          {{/rollTotal() computed::outcome 0}}
+          {{#rollTotal() computed::outcome 1}}
+            <div class="sheet-template-outcome sheet-outcome-success">
+              <span class="sheet-template-success-label" data-i18n="success-count">Success count</span>
+              <span class="sheet-template-successes">{{computed::dice}}</span>
+              <b class="sheet-template-verdict" data-i18n="limited-success">Success</b>
+            </div>
+          {{/rollTotal() computed::outcome 1}}
+          {{#rollTotal() computed::outcome 2}}
+            <div class="sheet-template-outcome sheet-outcome-critical">
+              <span class="sheet-template-success-label" data-i18n="success-count">Success count</span>
+              <span class="sheet-template-successes">{{computed::dice}}</span>
+              <b class="sheet-template-verdict" data-i18n="critical-success">Critical success!</b>
+            </div>
+          {{/rollTotal() computed::outcome 2}}
+        {{/utility}}
+        {{#prayed}}<div class="sheet-template-prayer">☼ <span data-i18n="prayer-result">Prayer to the Icons · +1 Darkness Point</span></div>{{/prayed}}
+        <div class="sheet-template-tags">
+          {{#automatic}}<span class="sheet-template-tag" data-i18n="automatic-fire">Automatic fire</span>{{/automatic}}
+          {{#desperation}}<span class="sheet-template-tag" data-i18n="desperation-roll">Desperation roll</span>{{/desperation}}
+        </div>
+        {{#details}}<div class="sheet-template-details">{{details}}</div>{{/details}}
+        <div class="sheet-template-meta">
+          {{#damage}}<span><span data-i18n="damage">Damage</span> <b>{{damage}}</b></span>{{/damage}}
+          {{#crit}}<span><span data-i18n="crit">Crit.</span> <b>{{crit}}</b></span>{{/crit}}
+          {{#range}}<span><span data-i18n="range">Range</span> <b>{{range}}</b></span>{{/range}}
+        </div>
+        {{#canpush}}<div class="sheet-template-actions">{{pushbutton}}</div>{{/canpush}}
+      </div>
+      {{/initiative}}
+    {{/invalid}}
+  </div>
+</rolltemplate>
+
+<script type="text/worker">
+  "use strict";
+
+  const SHEET_VERSION = "1.6.5";
+  const ATTRIBUTE_KEYS = ["strength", "agility", "wits", "empathy"];
+  const SKILLS = {
+    dexterity: { attribute: "agility", advanced: false, label: "dexterity" },
+    force: { attribute: "strength", advanced: false, label: "force" },
+    infiltration: { attribute: "agility", advanced: false, label: "infiltration" },
+    manipulation: { attribute: "empathy", advanced: false, label: "manipulation" },
+    meleecombat: { attribute: "strength", advanced: false, label: "melee-combat" },
+    observation: { attribute: "wits", advanced: false, label: "observation" },
+    rangedcombat: { attribute: "agility", advanced: false, label: "ranged-combat" },
+    survival: { attribute: "wits", advanced: false, label: "survival" },
+    command: { attribute: "empathy", advanced: true, label: "command" },
+    culture: { attribute: "empathy", advanced: true, label: "culture" },
+    datadjinn: { attribute: "wits", advanced: true, label: "data-djinn" },
+    medicurgy: { attribute: "wits", advanced: true, label: "medicurgy" },
+    mysticpowers: { attribute: "empathy", advanced: true, label: "mystic-powers" },
+    pilot: { attribute: "agility", advanced: true, label: "pilot" },
+    science: { attribute: "wits", advanced: true, label: "science" },
+    technology: { attribute: "wits", advanced: true, label: "technology" }
+  };
+  const MODIFIER_KEYS = ATTRIBUTE_KEYS.concat(Object.keys(SKILLS));
+  const ADVANCED_SKILL_KEYS = Object.keys(SKILLS).filter((skill) => SKILLS[skill].advanced);
+
+  const n = (value) => {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+  };
+  const checked = (value) => value === "1" || value === "on" || value === 1 || value === true;
+
+  const t = (key, fallback) => getTranslationByKey(key) || fallback || key;
+
+  const clean = (value) => String(value === undefined || value === null ? "" : value)
+    .replace(/\{\{/g, "(")
+    .replace(/\}\}/g, ")")
+    .replace(/[\r\n]+/g, " ")
+    .slice(0, 240);
+
+  const getRepeatingIDs = (section, callback) => {
+    getSectionIDs(section, (ids) => {
+      if (ids && ids.length) {
+        callback(ids);
+        return;
+      }
+      // Older Roll20 examples use the full repeating_* name. The fallback
+      // keeps the sheet compatible with both variants of the worker API.
+      getSectionIDs("repeating_" + section, (prefixedIds) => {
+        callback(prefixedIds || []);
+      });
+    });
+  };
+
+  const sectionData = (section, fields, callback) => {
+    getRepeatingIDs(section, (ids) => {
+      const names = [];
+      ids.forEach((id) => {
+        fields.forEach((field) => names.push("repeating_" + section + "_" + id + "_" + field));
+      });
+      if (!names.length) {
+        callback([]);
+        return;
+      }
+      getAttrs(names, (values) => {
+        callback(ids.map((id) => {
+          const row = {};
+          fields.forEach((field) => {
+            row[field] = values["repeating_" + section + "_" + id + "_" + field];
+          });
+          return row;
+        }));
+      });
+    });
+  };
+
+  const recalculate = (initialize) => {
+    const sections = {};
+    let pendingSections = 4;
+    const sectionLoaded = (name, rows) => {
+      sections[name] = rows;
+      pendingSections -= 1;
+      if (pendingSections > 0) return;
+
+      const gear = sections.gear || [];
+      const weapons = sections.weapons || [];
+      const armor = sections.armor || [];
+      const extraModifiers = sections.modifiers || [];
+      const baseNames = [
+        "strength", "agility", "wits", "empathy",
+        "hp_bonus", "mp_bonus", "movement_bonus", "encumbrance_bonus",
+        "hp", "mp"
+      ];
+      getAttrs(baseNames, (values) => {
+      const mods = {};
+      MODIFIER_KEYS.forEach((key) => { mods[key] = 0; });
+      let gearEncumbrance = 0;
+      let gearMovement = 0;
+      let carried = 0;
+      let armorRatingTotal = 0;
+
+      gear.forEach((row) => {
+        if (!checked(row.gear_equipped)) return;
+        const quantity = Math.max(0, n(row.gear_quantity || 1));
+        carried += Math.max(0, n(row.gear_weight)) * quantity;
+        const bonus = n(row.gear_bonus);
+        if (mods[row.gear_target] !== undefined) mods[row.gear_target] += bonus;
+        if (row.gear_target === "encumbrance") gearEncumbrance += bonus;
+        if (row.gear_target === "movement") gearMovement += bonus;
+      });
+      extraModifiers.forEach((row) => {
+        if (!checked(row.modifier_enabled)) return;
+        const bonus = n(row.modifier_value);
+        if (mods[row.modifier_target] !== undefined) mods[row.modifier_target] += bonus;
+        if (row.modifier_target === "encumbrance") gearEncumbrance += bonus;
+        if (row.modifier_target === "movement") gearMovement += bonus;
+      });
+      weapons.forEach((row) => {
+        if (checked(row.weapon_equipped)) {
+          carried += Math.max(0, n(row.weapon_weight)) * Math.max(0, n(row.weapon_quantity || 1));
+        }
+      });
+      armor.forEach((row) => {
+        if (checked(row.armor_equipped)) {
+          carried += Math.max(0, n(row.armor_weight));
+          armorRatingTotal += Math.max(0, n(row.armor_rating));
+        }
+      });
+
+      const strength = n(values.strength);
+      const agility = n(values.agility);
+      const wits = n(values.wits);
+      const empathy = n(values.empathy);
+      const hpMax = Math.max(0, strength + agility + n(values.hp_bonus));
+      const mpMax = Math.max(0, wits + empathy + n(values.mp_bonus));
+      const encumbranceMax = Math.max(0, strength * 2 + n(values.encumbrance_bonus) + gearEncumbrance);
+      const movement = Math.max(0, 10 + n(values.movement_bonus) + gearMovement);
+
+      const updates = {
+        sheet_version: SHEET_VERSION,
+        hp_max: hpMax,
+        mp_max: mpMax,
+        armor_rating_total: armorRatingTotal,
+        encumbrance_value: Math.round(carried * 100) / 100,
+        encumbrance_max: encumbranceMax,
+        movement_rate: movement,
+        gear_mod_encumbrance: gearEncumbrance,
+        gear_mod_movement: gearMovement
+      };
+      MODIFIER_KEYS.forEach((key) => { updates["mod_" + key] = mods[key]; });
+      if (initialize) {
+        updates.hp = hpMax;
+        updates.mp = mpMax;
+      }
+      setAttrs(updates, { silent: true });
+      });
+    };
+
+    sectionData(
+      "gear",
+      ["gear_equipped", "gear_quantity", "gear_weight", "gear_target", "gear_bonus"],
+      (rows) => sectionLoaded("gear", rows)
+    );
+    sectionData(
+      "weapons",
+      ["weapon_equipped", "weapon_quantity", "weapon_weight"],
+      (rows) => sectionLoaded("weapons", rows)
+    );
+    sectionData(
+      "armor",
+      ["armor_equipped", "armor_weight", "armor_rating"],
+      (rows) => sectionLoaded("armor", rows)
+    );
+    sectionData(
+      "modifiers",
+      ["modifier_enabled", "modifier_target", "modifier_value"],
+      (rows) => sectionLoaded("modifiers", rows)
+    );
+  };
+
+  const migrateRepeating = (oldSection, newSection, mapping, done) => {
+    getRepeatingIDs(oldSection, (ids) => {
+      if (!ids.length) {
+        done();
+        return;
+      }
+      const oldFields = Object.keys(mapping);
+      const names = [];
+      ids.forEach((id) => {
+        oldFields.forEach((field) => names.push("repeating_" + oldSection + "_" + id + "_" + field));
+      });
+      getAttrs(names, (values) => {
+        const updates = {};
+        ids.forEach((id) => {
+          const destinationId = oldSection === newSection ? id : generateRowID();
+          oldFields.forEach((oldField) => {
+            const value = values["repeating_" + oldSection + "_" + id + "_" + oldField];
+            if (value !== undefined && value !== "") {
+              updates["repeating_" + newSection + "_" + destinationId + "_" + mapping[oldField]] = value;
+            }
+          });
+        });
+        if (Object.keys(updates).length) {
+          setAttrs(updates, { silent: true }, done);
+        } else {
+          done();
+        }
+      });
+    });
+  };
+
+  const migrateLegacySheet = () => {
+    const legacyNames = [
+      "version", "name", "hitpoints", "mindpoints", "melee-combat",
+      "ranged-combat", "mystic-powers", "groupconcept"
+    ];
+    getAttrs(legacyNames, (values) => {
+      const hasLegacy = legacyNames.some((key) => values[key] !== undefined && values[key] !== "");
+      const updates = {};
+      const baseMapping = {
+        name: "character_name",
+        hitpoints: "hp",
+        mindpoints: "mp",
+        "melee-combat": "meleecombat",
+        "ranged-combat": "rangedcombat",
+        "mystic-powers": "mysticpowers",
+        groupconcept: "group_concept"
+      };
+      Object.keys(baseMapping).forEach((oldField) => {
+        if (values[oldField] !== undefined && values[oldField] !== "") {
+          updates[baseMapping[oldField]] = values[oldField];
+        }
+      });
+      const continueMigration = () => {
+        let pendingMigrations = 5;
+        const migrationDone = () => {
+          pendingMigrations -= 1;
+          if (pendingMigrations === 0) recalculate(!hasLegacy);
+        };
+        migrateRepeating("crits", "injuries", {
+          "crit-injury": "injury_name"
+        }, migrationDone);
+        migrateRepeating("weapon", "weapons", {
+          weapon: "weapon_name",
+          weapon_bonus: "weapon_bonus",
+          weapon_init: "weapon_initiative",
+          weapon_damage: "weapon_damage",
+          weapon_crit: "weapon_crit",
+          weapon_range: "weapon_range",
+          weapon_comments: "weapon_features"
+        }, migrationDone);
+        migrateRepeating("gear", "gear", {
+          gear: "gear_name",
+          gear_bonus: "gear_bonus"
+        }, migrationDone);
+        migrateRepeating("talents", "talents", {
+          talent: "talent_name"
+        }, migrationDone);
+        migrateRepeating("relationships", "relationships", {
+          relationship_pc: "relationship_name",
+          buddy: "relationship_buddy",
+          relationship: "relationship_notes"
+        }, migrationDone);
+      };
+      if (Object.keys(updates).length) {
+        setAttrs(updates, { silent: true }, continueMigration);
+      } else {
+        continueMigration();
+      }
+    });
+  };
+
+  on("sheet:opened", () => {
+    getAttrs(["sheet_version"], (values) => {
+      if (values.sheet_version) recalculate(false);
+      else migrateLegacySheet();
+    });
+  });
+
+  on(
+    "change:strength change:agility change:wits change:empathy " +
+    "change:hp_bonus change:mp_bonus change:movement_bonus change:encumbrance_bonus " +
+    "change:repeating_gear remove:repeating_gear " +
+    "change:repeating_weapons remove:repeating_weapons " +
+    "change:repeating_armor remove:repeating_armor " +
+    "change:repeating_modifiers remove:repeating_modifiers",
+    () => recalculate(false)
+  );
+
+  const updateAdvancedSkillAvailability = () => {
+    getAttrs(ADVANCED_SKILL_KEYS, (values) => {
+      const updates = {};
+      ADVANCED_SKILL_KEYS.forEach((skill) => {
+        updates[skill + "_trained"] = n(values[skill]) > 0 ? 1 : 0;
+      });
+      setAttrs(updates, { silent: true });
+    });
+  };
+
+  on(
+    "sheet:opened " + ADVANCED_SKILL_KEYS.map((skill) => "change:" + skill).join(" "),
+    updateAdvancedSkillAvailability
+  );
+
+  const visibilityPrefix = (visibility) => visibility === "gm" ? "/w gm " : "";
+
+  const outcomeFor = (successes, desperation, weaponCrit) => {
+    const requiredSuccesses = desperation ? 2 : 1;
+    if (successes < requiredSuccesses) return 0;
+    if (weaponCrit !== null && weaponCrit !== undefined) {
+      return successes >= Math.max(1, n(weaponCrit) + 1) ? 2 : 1;
+    }
+    return successes >= 3 ? 2 : 1;
+  };
+
+  const invalidRoll = (title, message) => {
+    getAttrs(["character_name", "roll_visibility"], (values) => {
+      const roll = visibilityPrefix(values.roll_visibility) +
+        "&{template:coriolis} {{character=" + clean(values.character_name) + "}}" +
+        " {{title=" + clean(title) + "}} {{invalid=" + clean(message) + "}}";
+      startRoll(roll, (result) => finishRoll(result.rollId));
+    });
+  };
+
+  const requestRollModifier = (callback) => {
+    const query = "?{" + clean(t("modifier", "Modifier")) + "|0}";
+    startRoll("!{{modifier=[[" + query + "]]}}", (result) => {
+      const modifierRoll = result.results && result.results.modifier;
+      const modifier = modifierRoll && modifierRoll.result !== undefined
+        ? n(modifierRoll.result)
+        : 0;
+      finishRoll(result.rollId);
+      callback(modifier);
+    });
+  };
+
+  const performRoll = (data) => {
+    if (!data.prayed && !data.modifierResolved) {
+      requestRollModifier((modifier) => {
+        performRoll(Object.assign({}, data, {
+          modifierResolved: true,
+          rollModifier: modifier
+        }));
+      });
+      return;
+    }
+    getAttrs(["character_name", "roll_visibility"], (values) => {
+      const rollModifier = data.prayed ? 0 : n(data.rollModifier);
+      let pool = Math.floor(n(data.pool) + rollModifier);
+      const allowDesperation = data.allowDesperation !== false;
+      const desperation = !!data.forceDesperation || (allowDesperation && pool <= 0);
+      if (pool <= 0) pool = allowDesperation ? 2 : 0;
+      const automatic = !!data.automatic;
+      let formula = pool + "d6";
+      if (automatic) {
+        const chains = Math.max(1, Math.floor(n(data.automaticChains || 1)));
+        // Roll20's > comparison is inclusive, so !>2 means "explode on 2–6":
+        // keep rolling until the first 1, matching Coriolis automatic fire.
+        for (let i = 0; i < chains; i += 1) formula += "+1d6!>2";
+      }
+      const components = (data.components || []).slice(0, 4).map((component) => ({
+        label: component.label,
+        value: component.value
+      }));
+      if (!data.prayed) {
+        let modifierIndex = -1;
+        for (let index = 0; index < components.length; index += 1) {
+          if (components[index].label === t("modifiers", "Modifiers")) {
+            modifierIndex = index;
+            break;
+          }
+        }
+        if (modifierIndex >= 0) {
+          components[modifierIndex].value = n(components[modifierIndex].value) + rollModifier;
+        } else if (components.length < 4) {
+          components.push({
+            label: t("modifier", "Modifier"),
+            value: rollModifier
+          });
+        }
+      }
+      let componentFields = "";
+      components.forEach((component, index) => {
+        const position = index + 1;
+        componentFields +=
+          " {{component" + position + "=" + clean(component.label) + "}}" +
+          " {{component" + position + "value=" + clean(component.value) + "}}";
+      });
+      const canPush = data.canPush === false ? "" :
+        " {{canpush=1}} {{pushbutton=[" + clean(t("pray-to-icons", "Pray to the Icons")) + "](~@{character_id}|push)}}";
+      const roll = visibilityPrefix(values.roll_visibility) +
+        "&{template:coriolis}" +
+        " {{character=" + clean(values.character_name) + "}}" +
+        " {{title=" + clean(data.title) + "}}" +
+        " {{pool=" + pool + "}}" +
+        " {{dice=[[" + formula + "]]}}" +
+        " {{outcome=[[0]]}} {{remaining=[[0]]}}" +
+        componentFields +
+        (data.prayed ? " {{prayed=1}}" : "") +
+        (data.utility ? " {{utility=1}}" : "") +
+        (automatic || data.automaticLabel ? " {{automatic=1}}" : "") +
+        (desperation ? " {{desperation=1}}" : "") +
+        (data.resultLabel ? " {{resultlabel=" + clean(data.resultLabel) + "}}" : "") +
+        (data.resultNote ? " {{resultnote=" + clean(data.resultNote) + "}}" : "") +
+        (data.details ? " {{details=" + clean(data.details) + "}}" : "") +
+        (data.damage ? " {{damage=" + clean(data.damage) + "}}" : "") +
+        (data.crit ? " {{crit=" + clean(data.crit) + "}}" : "") +
+        (data.range ? " {{range=" + clean(data.range) + "}}" : "") +
+        canPush;
+
+      startRoll(roll, (result) => {
+        const dice = result.results.dice && result.results.dice.dice ? result.results.dice.dice : [];
+        const newSuccesses = dice.filter((die) => die === 6).length;
+        const totalSuccesses = newSuccesses + n(data.previousSuccesses);
+        const remaining = Math.max(0, dice.length - newSuccesses);
+        const outcome = outcomeFor(
+          totalSuccesses,
+          desperation,
+          data.weaponRoll ? n(data.crit) : null
+        );
+        finishRoll(result.rollId, {
+          dice: totalSuccesses,
+          outcome: outcome,
+          remaining: remaining
+        });
+
+        if (!data.prayed && data.canPush !== false) {
+          setAttrs({
+            last_can_push: remaining > 0 ? 1 : 0,
+            last_remaining: remaining,
+            last_successes: totalSuccesses,
+            last_title: clean(data.title),
+            last_details: clean(data.details),
+            last_automatic: automatic ? 1 : 0,
+            last_desperation: desperation ? 1 : 0,
+            last_damage: clean(data.damage),
+            last_crit: clean(data.crit),
+            last_range: clean(data.range),
+            last_weapon_roll: data.weaponRoll ? 1 : 0,
+            last_component1: clean(components[0] && components[0].label),
+            last_component1_value: clean(components[0] && components[0].value),
+            last_component2: clean(components[1] && components[1].label),
+            last_component2_value: clean(components[1] && components[1].value),
+            last_component3: clean(components[2] && components[2].label),
+            last_component3_value: clean(components[2] && components[2].value),
+            last_component4: clean(components[3] && components[3].label),
+            last_component4_value: clean(components[3] && components[3].value)
+          }, { silent: true });
+        } else {
+          setAttrs({ last_can_push: 0 }, { silent: true });
+        }
+      });
+    });
+  };
+
+  ATTRIBUTE_KEYS.forEach((attribute) => {
+    on("clicked:roll_" + attribute, () => {
+      getAttrs([attribute, "mod_" + attribute], (values) => {
+        const modifier = n(values["mod_" + attribute]);
+        const pool = n(values[attribute]) + modifier;
+        if (n(values[attribute]) <= 0) {
+          invalidRoll(t(attribute), t("invalid-attribute", "This attribute cannot be rolled at zero."));
+          return;
+        }
+        performRoll({
+          title: t(attribute),
+          pool: pool,
+          components: [
+            { label: t(attribute), value: n(values[attribute]) },
+            { label: t("modifiers", "Modifiers"), value: modifier }
+          ]
+        });
+      });
+    });
+  });
+
+  Object.keys(SKILLS).forEach((skill) => {
+    on("clicked:roll_" + skill, () => {
+      const config = SKILLS[skill];
+      getAttrs([config.attribute, skill, "mod_" + skill], (values) => {
+        if (config.advanced && n(values[skill]) <= 0) {
+          invalidRoll(t(config.label), t("invalid-advanced", "Advanced skills require at least one skill level."));
+          return;
+        }
+        if (n(values[config.attribute]) + n(values[skill]) <= 0) {
+          invalidRoll(t(config.label), t("invalid-skill", "This skill cannot be rolled with a zero base pool."));
+          return;
+        }
+        const modifier = n(values["mod_" + skill]);
+        const pool = n(values[config.attribute]) + n(values[skill]) + modifier;
+        performRoll({
+          title: t(config.label),
+          pool: pool,
+          components: [
+            { label: t(config.attribute), value: n(values[config.attribute]) },
+            { label: t(config.label), value: n(values[skill]) },
+            { label: t("modifiers", "Modifiers"), value: modifier }
+          ]
+        });
+      });
+    });
+  });
+
+  on("clicked:roll_custom", () => {
+    getAttrs(["custom_roll_name", "custom_roll_pool"], (values) => {
+      performRoll({
+        title: values.custom_roll_name || t("custom-roll", "Custom roll"),
+        pool: n(values.custom_roll_pool),
+        components: [
+          { label: t("custom-dice-pool", "Custom dice pool"), value: n(values.custom_roll_pool) }
+        ]
+      });
+    });
+  });
+
+  on("clicked:roll_initiative", () => {
+    requestRollModifier((modifier) => {
+      getAttrs(["character_name", "roll_visibility"], (values) => {
+        const roll = visibilityPrefix(values.roll_visibility) +
+          "&{template:coriolis}" +
+          " {{character=" + clean(values.character_name) + "}}" +
+          " {{title=" + clean(t("initiative", "Initiative")) + "}}" +
+          " {{initiative=1}}" +
+          " {{modifier=" + modifier + "}}" +
+          " {{initiative_roll=[[1d10+(" + modifier + ") &{tracker}]]}}";
+        startRoll(roll, (result) => {
+          finishRoll(result.rollId);
+          setAttrs({ last_can_push: 0 }, { silent: true });
+        });
+      });
+    });
+  });
+
+  on("clicked:roll_armor", () => {
+    sectionData("armor", ["armor_equipped", "armor_rating"], (armor) => {
+      const rating = armor.reduce((total, row) => {
+        return checked(row.armor_equipped)
+          ? total + Math.max(0, n(row.armor_rating))
+          : total;
+      }, 0);
+      setAttrs({ armor_rating_total: rating }, { silent: true });
+      performRoll({
+        title: t("armor"),
+        pool: rating,
+        allowDesperation: false,
+        canPush: false,
+        utility: true,
+        resultLabel: t("armor-blocked", "Blocked damage"),
+        resultNote: t("armor-roll-help", "Each 6 blocks 1 point of damage."),
+        components: [
+          { label: t("rating"), value: rating }
+        ]
+      });
+    });
+  });
+
+  on("clicked:roll_radiation", () => {
+    getAttrs(["radiation"], (values) => {
+      const radiation = Math.max(0, n(values.radiation));
+      performRoll({
+        title: t("radiation"),
+        pool: radiation,
+        allowDesperation: false,
+        canPush: false,
+        utility: true,
+        resultLabel: t("radiation-damage", "Radiation damage"),
+        resultNote: t("radiation-roll-help", "Each 6 causes 1 point of damage."),
+        components: [
+          { label: t("radiation"), value: radiation }
+        ]
+      });
+    });
+  });
+
+  on("clicked:repeating_weapons:weaponroll", () => {
+    getAttrs([
+      "strength", "agility", "meleecombat", "rangedcombat",
+      "mod_meleecombat", "mod_rangedcombat",
+      "repeating_weapons_weapon_name", "repeating_weapons_weapon_type",
+      "repeating_weapons_weapon_bonus", "repeating_weapons_weapon_damage",
+      "repeating_weapons_weapon_crit", "repeating_weapons_weapon_range",
+      "repeating_weapons_weapon_mode", "repeating_weapons_weapon_ignoredones",
+      "repeating_weapons_weapon_explosive", "repeating_weapons_weapon_blastpower",
+      "repeating_weapons_weapon_blastradius", "repeating_weapons_weapon_features"
+    ], (values) => {
+      const melee = values.repeating_weapons_weapon_type === "melee";
+      const attribute = melee ? "strength" : "agility";
+      const skill = melee ? "meleecombat" : "rangedcombat";
+      const automatic = values.repeating_weapons_weapon_mode === "automatic";
+      const base = n(values[attribute]) + n(values[skill]) + n(values.repeating_weapons_weapon_bonus);
+      if (base <= 0) {
+        invalidRoll(values.repeating_weapons_weapon_name || t("weapon"), t("invalid-weapon", "The weapon dice pool is invalid."));
+        return;
+      }
+      const modifier = n(values["mod_" + skill]) - (automatic ? 2 : 0);
+      const pool = base + modifier;
+      let details = "";
+      if (values.repeating_weapons_weapon_explosive === "1") {
+        details += t("blast-power") + " " + n(values.repeating_weapons_weapon_blastpower);
+        if (values.repeating_weapons_weapon_blastradius) {
+          details += " · " + t("blast-radius") + " " + values.repeating_weapons_weapon_blastradius;
+        }
+      }
+      if (values.repeating_weapons_weapon_features) details += " · " + values.repeating_weapons_weapon_features;
+      performRoll({
+        title: values.repeating_weapons_weapon_name || t("weapon"),
+        pool: pool,
+        automatic: automatic,
+        automaticChains: n(values.repeating_weapons_weapon_ignoredones) + 1,
+        damage: values.repeating_weapons_weapon_damage,
+        crit: values.repeating_weapons_weapon_crit,
+        weaponRoll: true,
+        range: t("range-" + values.repeating_weapons_weapon_range, values.repeating_weapons_weapon_range),
+        details: details,
+        components: [
+          { label: t(attribute), value: n(values[attribute]) },
+          { label: t(SKILLS[skill].label), value: n(values[skill]) },
+          { label: t("weapon"), value: n(values.repeating_weapons_weapon_bonus) },
+          { label: t("modifiers", "Modifiers"), value: modifier }
+        ]
+      });
+    });
+  });
+
+  on("clicked:repeating_armor:armorroll", () => {
+    getAttrs([
+      "repeating_armor_armor_name",
+      "repeating_armor_armor_rating",
+      "repeating_armor_armor_features"
+    ], (values) => {
+      performRoll({
+        title: values.repeating_armor_armor_name || t("armor"),
+        pool: n(values.repeating_armor_armor_rating),
+        allowDesperation: false,
+        canPush: false,
+        utility: true,
+        resultLabel: t("armor-blocked", "Blocked damage"),
+        resultNote: t("armor-roll-help", "Each 6 blocks 1 point of damage."),
+        details: values.repeating_armor_armor_features,
+        components: [
+          { label: t("armor"), value: n(values.repeating_armor_armor_rating) }
+        ]
+      });
+    });
+  });
+
+  on("clicked:push", () => {
+    getAttrs([
+      "last_can_push", "last_remaining", "last_successes", "last_title",
+      "last_details", "last_automatic", "last_desperation", "last_damage", "last_crit", "last_range",
+      "last_weapon_roll",
+      "last_component1", "last_component1_value", "last_component2", "last_component2_value",
+      "last_component3", "last_component3_value", "last_component4", "last_component4_value",
+      "actor_type", "darkness_generated", "darkness_spent"
+    ], (values) => {
+      if (n(values.last_can_push) !== 1) {
+        invalidRoll(t("pray-to-icons"), t("nothing-to-push", "There is no roll available to push."));
+        return;
+      }
+      const automatic = n(values.last_automatic) === 1;
+      const pool = n(values.last_remaining);
+      if (pool <= 0) {
+        invalidRoll(t("pray-to-icons"), t("no-dice-to-push", "There are no dice available to reroll."));
+        return;
+      }
+      if (values.actor_type === "npc") {
+        setAttrs({ darkness_spent: n(values.darkness_spent) + 1 }, { silent: true });
+      } else {
+        setAttrs({ darkness_generated: n(values.darkness_generated) + 1 }, { silent: true });
+      }
+      performRoll({
+        title: values.last_title || t("pushed-roll", "Pushed roll"),
+        pool: pool,
+        previousSuccesses: n(values.last_successes),
+        forceDesperation: n(values.last_desperation) === 1,
+        prayed: true,
+        automatic: false,
+        automaticLabel: automatic,
+        canPush: false,
+        details: values.last_details,
+        damage: values.last_damage,
+        crit: values.last_crit,
+        weaponRoll: n(values.last_weapon_roll) === 1,
+        range: values.last_range,
+        components: [
+          { label: values.last_component1, value: values.last_component1_value },
+          { label: values.last_component2, value: values.last_component2_value },
+          { label: values.last_component3, value: values.last_component3_value },
+          { label: values.last_component4, value: values.last_component4_value }
+        ].filter((component) => component.label)
+      });
+    });
+  });
+</script>

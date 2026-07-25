@@ -1,0 +1,9 @@
+{
+  "html": "coriolis-algol.html",
+  "css": "coriolis-algol.css",
+  "authors": "Fan-made community sheet; implementation by OpenAI Codex",
+  "preview": "preview.png",
+  "instructions": "Nieoficjalna karta bohatera i BN-a do Coriolis: Trzeci Horyzont, utrzymana w czarno-złotej estetyce inspirowanej motywem Algol. Obsługuje rzuty cech i umiejętności, broń, ogień automatyczny, materiały wybuchowe, pancerz, modlitwę do Ikon, ekwipunek, obciążenie, talenty, urazy, relacje oraz automatyczną migrację najważniejszych danych ze starej karty Coriolis. Pełna instrukcja znajduje się w README.md.",
+  "legacy": false,
+  "version": "1785290400"
+}
